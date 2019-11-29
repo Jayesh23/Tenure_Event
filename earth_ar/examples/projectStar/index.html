@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HTML custom element for displaying 3D models: Hello World</title>
+<style>
+.model { 
+  animation: spin 10s linear infinite;
+ }
+
+ @keyframes spin {
+   to {
+     transform: rotateY(1turn)
+   }
+ }
+</style>
+</head>
+<body>
+  <h1>Model custom element: Hello world</h1>
+  <x-model class="model" src="aframe-glitch-me.glb"></x-model>
+  <p>If everything worked OK, there should be a rotating 3D model above.</p>
+
+
+  <script src="assets/custom-element-polyfill.min.js"></script>
+  <script src="assets/three.min.js"></script>
+  <script src="assets/three-gltf-loader.min.js"></script>
+  <script src="assets/model-element.min.js"></script>
+</body>
+</html>
