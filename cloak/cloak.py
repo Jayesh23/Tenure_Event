@@ -3,7 +3,7 @@ import numpy as np
 import time
 
 # cap = cv2.VideoCapture('/home/jayesh/Downloads/cloak.mp4')
-cap = cv2.VideoCapture(2)
+cap = cv2.VideoCapture(0)
 time.sleep(3)
 count=0
 background=0
