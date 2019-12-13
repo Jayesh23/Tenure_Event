@@ -29,7 +29,7 @@ def get_trackbar_values(range_filter):
 def main():
 
 	range_filter = 'BGR'
-	camera = cv2.VideoCapture(2)                              
+	camera = cv2.VideoCapture(0)                              
 
 	setup_trackbars(range_filter)
 
