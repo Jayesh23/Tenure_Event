@@ -8,6 +8,10 @@ time.sleep(3)
 count=0
 background=0
 
+cv2.namedWindow("Paint", cv2.WND_PROP_FULLSCREEN)          
+cv2.setWindowProperty("Paint", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+        
+        
 for i in range(60):
     ret, background = cap.read()
 background = np.flip(background, axis = 1)
@@ -36,7 +40,7 @@ while(1):
     res1 = cv2.bitwise_and(background, background, mask = mask1)
     res2 = cv2.bitwise_and(img, img, mask=mask2)
     final_output = cv2.addWeighted(res1, 1, res2, 1, 0)
-    cv2.imshow("Invisible", final_output)
+    cv2.imshow("Paint", final_output)
     # k = cv2.waitKey(10)
     
     if cv2.waitKey(1) & 0xFF == ord('q'):
